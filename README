@@ -1,4 +1,10 @@
-# Build Kernel
+ Refer to http://source.android.com/source/downloading.html
+ $ repo init -u https://android.googlesource.com/platform/manifest -b android-5.1.1_r13
+ $ cd .repo
+ $ git clone https://github.com/peyo-hd/local_manifests -b lollipop
+ $ repo sync
+ 
+ # Build Kernel
  $ cd kernel/rpi
  $ ARCH=arm scripts/kconfig/merge_config.sh arch/arm/configs/bcm2709_defconfig android/configs/android-base.cfg android/configs/android-recommended.cfg
  $ ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- make zImage
